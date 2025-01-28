@@ -19,7 +19,7 @@ then
     echo
 
     #Exibi cabeçalho de qual HD e dia da semana é o backup
-    echo "Espaço de armazenamento de $dia no HD de backup do servidor SRVX3"
+    echo "Espaço de armazenamento de $dia no HD de backup do servidor SRV01"
 
     #Exibi espaço ocupado e livre do HD
     df -h /mnt/backup
@@ -29,13 +29,13 @@ then
 
     sudo mount -t cifs //10.150.200.8/g$ /mnt/backup -o username=****,password=****,iocharset=utf8
     echo
-    echo "Espaço de armazenamento de $dia no HD de backup do servidor SRVX8"
+    echo "Espaço de armazenamento de $dia no HD de backup do servidor SRV02"
     df -h /mnt/backup
     sudo umount /mnt/backup
 
     sudo mount -t cifs //10.150.200.3/c$ /mnt/backup -o username=****,password=****,iocharset=utf8
     echo
-    echo "Espaço de armazenamento no servidor SERV03, de acesso remoto"
+    echo "Espaço de armazenamento no servidor SRV03, de acesso remoto"
     df -h /mnt/backup
     sudo umount /mnt/backup
 
